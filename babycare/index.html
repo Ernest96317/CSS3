@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+  <title>Document</title>
+  <style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  html,body{
+    /*height: 100vh;*/
+    background-color: #fffef1;
+    min-height: 100%;
+  }
+  .container{
+    width: 10rem;
+    margin: 0 auto;
+    background-color: #fffef1;
+    position: relative;
+  }
+  .header{
+    margin-top:.69333333rem;
+    margin-left:2.613333rem ;
+    width: 5.01333333rem;
+    height: .88rem;
+    border:1px solid #f99044;
+    position: relative;
+  }
+  .header .title{
+    width: 5.0133333rem;
+    height: .88rem;
+    background-color: #f99044;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    font-size: .48rem;
+    right: .2133333rem;
+    top: .2133333rem;
+    padding-top:0.186666rem ;
+
+  }
+  .header .title em{
+    font-size: .3733333rem;
+  }
+   .container .tip{
+    position: absolute;
+    top: 1.68rem;
+    font-size: .4rem;
+    letter-spacing: .2em;
+    margin-left: 2.426667rem;
+  }
+  .border {
+    width: 6.373333333333333rem;
+    margin: 0 auto;
+    position: relative;
+    height: 8.986666666666667rem;
+  }
+
+  .item__prompt {
+    position: absolute;
+    width: 0.77333333rem;
+    height: 0.77333333rem;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 0.4rem;
+    text-align: center;
+    line-height: 0.77333333rem;
+    z-index: 10;
+  }
+
+  .prompt-suit {
+    background: #f7c318;
+    top: 1.48rem;
+  }
+
+  .prompt-food {
+    background: #84c048;
+    top: 2.133333rem;
+    right: 0;
+  }
+
+  .prompt-use {
+    background: #f7746b;
+    top: 5.333333333333333rem;
+  }
+
+  .prompt-doctor {
+    background: #7bc2f3;
+    top: 6.08rem;
+    right: 0;
+  }
+
+  .logo, .include {
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .item-suit .include {
+    position: absolute;
+    top: 1.6rem;
+    left: 0.48rem;
+    width: 1.92rem;
+    height: 1.92rem;
+    background: #fdf2c6;
+  }
+
+  .logo-suit {
+    background: #f7c318;
+    width: 1.6266666666667rem;
+    height: 1.6266666666667rem;
+    margin: 0.16rem auto;
+  }
+
+  .item-food .include {
+    position: absolute;
+    top: 2.026666666666667rem;
+    right: 0.4rem;
+    width: 2.666666666666667rem;
+    height: 2.666666666666667rem;
+    background: #e6f2cf;
+  }
+
+  .logo-food {
+    background: #84c048;
+    width: 2.186666666666667rem;
+    height: 2.186666666666667rem;
+    margin: 0.24rem auto;
+  }
+
+  .item-use .include {
+    position: absolute;
+    top: 5.333333333333333rem;
+    left: 0.266666666666667rem;
+    width: 3.04rem;
+    height: 3.04rem;
+    background: #fde2d6;
+  }
+
+  .logo-use {
+    background: #f7746b;
+    width: 2.506666666666667rem;
+    height: 2.506666666666667rem;
+    margin: 0.266666666666667rem auto;
+  }
+
+  .item-doctor .include {
+    position: absolute;
+    top: 6.506666666666667rem;
+    right: 0.32rem;
+    width: 1.52rem;
+    height: 1.52rem;
+    background: #e5f2f1;
+  }
+
+  .logo-doctor {
+    background: #7bc2f3;
+    width: 1.28rem;
+    height: 1.28rem;
+    margin: 0.133333333333333rem auto;
+  }
+
+  .icon {
+    display: inline-block;
+  }
+
+  .icon-suit {
+    width: 0.773333333333333rem;
+    height: 0.826666666666667rem;
+    background: url('./img/icon-suit.png') no-repeat;
+    background-size: contain;
+    margin-top: 0.4rem;
+  }
+
+  .icon-food {
+    width: 0.72rem;
+    height: 1.386666666666667rem;
+    background: url('./img/icon-milk.png') no-repeat;
+    background-size: contain;
+    margin-top: 0.426666666666667rem;
+  }
+
+  .icon-use {
+    width: 1.306666666666667rem;
+    height: 1.24rem;
+    background: url('./img/icon-car.png') no-repeat;
+    background-size: contain;
+    margin-top: 0.693333333333333rem;
+  }
+
+  .icon-doctor {
+    width: 0.613333333333333rem;
+    height: 0.586666666666667rem;
+    background: url('./img/icon-home.png') no-repeat;
+    background-size: contain;
+    margin-top: 0.346666666666667rem;
+  }
+
+  .price {
+    position: absolute;
+    font-size: 0.32rem;
+    text-align: center;
+  }
+
+  .item-suit .price {
+    top: 3.786666666666667rem;
+    left: 0.293333333333333rem;
+    color: #f7c318;
+  }
+
+  .item-food .price {
+    top: 4.96rem;
+    right: 0.48rem;
+    color: #84c048;
+  }
+
+  .item-use .price {
+    top: 8.613333333333333rem;
+    left: 0.506666666666667rem;
+    color: #f7746b;
+  }
+
+  .item-doctor .price {
+    top: 8.213333333333333rem;
+    right: 0;
+    color: #7bc2f3;
+  }
+  .footer {
+    margin: 0 auto;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .footer .btn {
+    display: inline-block;
+    width: 4.64rem;
+    height: 1.333333333333333rem;
+    font-size: 0.533333333333333rem;
+    line-height: 1.333333333333333rem;
+    background: #ff8f29;
+    color: #fff;
+    border-radius: 40px;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">
+        <h3>新生儿期 <em>（0~1岁）</em></h3>
+      </div>
+    </div>
+    <p class="tip">这个阶段每月的主要开销：</p>
+    <div class="border">
+    <div class="container__item item-suit">
+      <div class="prompt-suit item__prompt">衣</div>
+      <div class="include">
+        <div class="logo logo-suit">
+          <i class="icon icon-suit"></i>
+        </div>
+      </div>
+      <p class="price">200元～500元</p>
+    </div>
+    <div class="container__item item-food">
+      <div class="prompt-food item__prompt">食</div>
+      <div class="include">
+        <div class="logo logo-food">
+          <i class="icon icon-food"></i>
+        </div>
+      </div>
+      <p class="price">200元～2000元</p>
+    </div>
+    <div class="container__item item-use">
+      <div class="prompt-use item__prompt">用</div>
+      <div class="include">
+        <div class="logo logo-use">
+          <i class="icon icon-use"></i>
+        </div>
+      </div>
+      <p class="price">450元～2100元</p>
+    </div>
+    <div class="container__item item-doctor">
+      <div class="prompt-doctor item__prompt">医</div>
+      <div class="include">
+        <div class="logo logo-doctor">
+          <i class="icon icon-doctor"></i>
+        </div>
+      </div>
+      <p class="price">50元～200元</p>
+    </div>
+    </div>
+   <div class="footer">
+    <span class="btn">下一步</span>
+  </div>
+</div>
+</body>
+</html>

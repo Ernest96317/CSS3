@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>出错了。。。</title>
+  <link href="http://cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js"></script>
+
+</head>
+<body>
+  <div class="nav">
+    <div class="ui grid">
+      <div class="four wide column"></div>
+      <div class="eight wide column">
+        <a href="/posts.html">
+          <h1>Ernest的博客</h1>
+        </a>
+        <p>代码写的飞快，剩下的时间,,,撸串去把。</p>
+      </div>
+    </div>
+  </div>
+<div class="nav-setting">
+  <div class="ui buttons">
+    <div class="ui floating dropdown button">
+      <i class="icon bars"></i>
+      <div class="menu">
+        <a href="/signup.html" class="item">登录</a>
+        <a href="/signin.html" class="item">注册</a>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- motifications 网站提示 -->
+  <div class="ui grid">
+    <div class="four wide column"></div>
+    <div class="eight wide column">
+      <div class="ui success message">
+        <p>恭喜您，成功注册！</p>
+      </div>
+      <div class="ui error message">
+        <p>出错了！</p>
+      </div>
+    </div>
+  </div>
+  <div class="post-content">
+    <div class="ui grid">
+      <div class="four wide column">
+        <a href="posts.html" class="avatar">
+          <img src="/img/" alt="" class="avatar"></a>
+      </div>
+      <div class="eight wide column">
+        <div class="ui segment">
+          <h3>
+            <a href="posts.html">论Ernest的撸串哲学</a>
+          </h3>
+          <pre>
+            第一步： 在  ？ 处填写你的答案。
+            第二步： 填写完成后，运行一下，看看是不是跟你填写的结果一致。
+            第三步： 如果你有不一致的地方，思考一下为什么跟你的不一致呢
+          </pre>
+          <div>
+            <span class="tag">前天</span>
+            <span class="tag right">
+              <span>浏览（10万+）</span>
+              <span>留言（10万+）</span>
+              <div class="ui inline dropdown">
+                <div class="text"></div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                  <div class="item">
+                    <a href="edit.html">编辑</a>
+                  </div>
+                  <div class="item">
+                    <a href="remove.html">删除</a>
+                  </div>
+                </div>
+              </div>
+            </span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script>
+  // js  插件的用法  元素上插入相应的类名， script 加上功能
+  $(function(){
+   $('.ui.dropdown').dropdown();
+  })
+  </script>
+</body>
+</html>

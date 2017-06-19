@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>出错了。。。</title>
+  <link href="http://cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js"></script>
+
+</head>
+<body>
+  <div class="nav">
+    <div class="ui grid">
+      <div class="four wide column"></div>
+      <div class="eight wide column">
+        <a href="/posts.html">
+          <h1>Ernest的博客</h1>
+        </a>
+        <p>代码写的飞快，剩下的时间,,,撸串去把。</p>
+      </div>
+    </div>
+  </div>
+<div class="nav-setting">
+  <div class="ui buttons">
+    <div class="ui floating dropdown button">
+      <i class="icon bars"></i>
+      <div class="menu">
+        <a href="/signup.html" class="item">登录</a>
+        <a href="/signin.html" class="item">注册</a>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- motifications 网站提示 -->
+  <div class="ui grid">
+    <div class="four wide column"></div>
+    <div class="eight wide column">
+      <div class="ui success message">
+        <p>恭喜您，成功注册！</p>
+      </div>
+      <div class="ui error message">
+        <p>出错了！</p>
+      </div>
+    </div>
+  </div>
+  <div class="ui grid">
+    <div class="four wide column"></div>
+    <div class="eight wide column">
+      <form class="ui form segment" method="post" enctype="multipart/form-data">
+        <div class="field required">
+          <label for="usename">用户名</label>
+          <input type="text" id="username" placeholder="请输入用户名" name="name" required />
+        </div>
+        <div class="field required">
+          <label for="password">密码</label>
+          <input type="password" id="password" placeholder="请输入密码" name="password" required />
+        </div>
+        <div class="field required">
+          <label for="repeat-password">重复密码</label>
+          <input type="password" id="repeat-password" placeholder="请再次输入密码" name="repeat-password" required />
+        </div>
+        <div class="field required">
+          <label for="">性别</label>
+          <select name="gender" id="" class="ui selection dropdown compact">
+            <option value="m">男</option>
+            <option value="f">女</option>
+            <option value="x">保密</option>
+          </select>
+        </div>
+        <div class="field required">
+          <label for="">头像</label>
+          <input type="file" name="avatar">
+        </div>
+        <div class="field required">
+          <label for="bio">简介</label>
+          <textarea name="bio" id="bio" cols="30" rows="5"></textarea>
+        </div>
+        <input type="submit" class="ui button fluid" value="注册"/>
+      </form>
+    </div>
+  </div>
+  <script>
+  // js  插件的用法  元素上插入相应的类名， script 加上功能
+  $(function(){
+   $('.ui.dropdown').dropdown();
+  })
+  </script>
+</body>
+</html>

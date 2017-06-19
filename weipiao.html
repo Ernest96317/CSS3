@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  *,*::after,*::before {
+  -webkit-tap-heightlight-color:transparent;
+  margin: 0;
+  padding: 0;
+}
+a{
+    color: #666;
+    text-decoration: none;
+    outline: none;
+  }
+  a:visited {
+  /*继承父元素的颜色*/
+  color: inherit;
+}
+a:active {
+  outline: 0;
+}
+  .flex {
+      display: -webkit-flex!important;
+      display: flex!important;
+    }
+    .flex-auto{
+      -webkit-flex:1;
+      flex:1;
+    }
+    .label{
+      display: inline-block;
+      vertical-align: middle;
+      transition: background .1s ease;
+      box-sizing: border-box;
+      border-radius: 2px;
+      -webkit-border-radius: 2px;
+      font-size: .9rem;
+      line-height: 1.2;
+      margin: 1px 4px 1px 1px;
+      background: #fff;
+      color: #f7665c;
+      -webkit-box-shadow : inset 0 0 1px #f7665c;
+      box-shadow : inset 0 0 1px #f7665c;
+      padding: .5rem .8rem .4rem;
+    }
+    .label--secondary {
+  -webkit-box-shadow:inset 0 0 1px #19194d;
+  color: #7e8bb9;
+}
+.ico--cup, .ico--data, .ico--popcorn, .ico--shit{
+    width: 18px;
+    height: 16px;
+    background: url(data:image/png;base64,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) no-repeat;
+    -webkit-background-size: 89px auto;
+    background-size: 89px auto;
+    margin-right: 5px;
+    /*color: transparent;*/
+  }
+  [class^=ico] {
+    display: inline-block;
+  }
+  .ico--popcorn{
+    width: 20px;
+    height: 24px;
+    background-position: 1px -25px;
+  }
+  #app,body,html{
+    height: 100%;
+  }
+  #app{
+  max-width: 640px; /* 320px*2  iphone 宽 手机横屏了*/
+  margin: 0 auto;
+}
+#movies .movie-list{
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#movies .movie-item{
+  display: -webkit-flex;
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+#movies .movie-item img{
+  width: 65px;
+  height: 95px;
+}
+#movies .movie-item .movie-info{
+  -webkit-flex: 1;
+  flex: 1;
+  margin-left: 10px;
+  padding-top: 5px;
+  overflow: hidden;
+}
+#movies .movie-item .name{
+  font-size: 14px;
+  color: #333;
+}
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="home" id="home">
+      <div class="home__content">
+        <div id="movies">
+          <div class="movie-list">
+            <a href="" class="movie-item">
+              <img src="http://static.wepiao.com/movie/2017/2/27_0/201702271027262203.jpg" alt="">
+              <div class="movie-info">
+                <div class="flex">
+                  <div class="name flex-auto">金刚: 骷髅岛</div>
+                  <div>
+                    <span class="label label--secondary">IMAX3D</span>
+                  </div>
+                  <span class="score">
+                    <span>
+                      <i class="ico--popcorn"></i>
+                      <span class="c_cf616a">7.9分</span>
+                    </span>
+                  </span>
+                </div>
+                <div>
+                  <h4 class="remark">抖森勇闯骷髅岛,最强金刚归来</h4>
+                </div>
+                <div class="info-container">
+                  <div class="basic-info">
+                    <p class="actor ellipsis">
+                      汤姆·西德勒斯顿/布丽·拉尔森/滚缪reseijslkgshglg
+                    </p>
+                  </div>
+                  <div class="buy_btn">
+                    <button class="button button-inverse">购票</button>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div id="movies">
+          <div class="movie-list">
+            <a href="" class="movie-item">
+              <img src="http://static.wepiao.com/movie/2017/2/27_0/201702271027262203.jpg" alt="">
+              <div class="movie-info">
+                <div class="flex">
+                  <div class="name flex-auto">金刚: 骷髅岛</div>
+                  <div>
+                    <span class="label label--secondary">IMAX3D</span>
+                  </div>
+                  <span class="score">
+                    <span>
+                      <i class="ico--popcorn"></i>
+                      <span class="c_cf616a">7.9分</span>
+                    </span>
+                  </span>
+                </div>
+                <div>
+                  <h4 class="remark">抖森勇闯骷髅岛,最强金刚归来</h4>
+                </div>
+                <div class="info-container">
+                  <div class="basic-info">
+                    <p class="actor ellipsis">
+                      汤姆·西德勒斯顿/布丽·拉尔森/滚缪reseijslkgshglg
+                    </p>
+                  </div>
+                  <div class="buy_btn">
+                    <button class="button button-inverse">购票</button>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div id="movies">
+          <div class="movie-list">
+            <a href="" class="movie-item">
+              <img src="http://static.wepiao.com/movie/2017/2/27_0/201702271027262203.jpg" alt="">
+              <div class="movie-info">
+                <div class="flex">
+                  <div class="name flex-auto">金刚: 骷髅岛</div>
+                  <div>
+                    <span class="label label--secondary">IMAX3D</span>
+                  </div>
+                  <span class="score">
+                    <span>
+                      <i class="ico--popcorn"></i>
+                      <span class="c_cf616a">7.9分</span>
+                    </span>
+                  </span>
+                </div>
+                <div>
+                  <h4 class="remark">抖森勇闯骷髅岛,最强金刚归来</h4>
+                </div>
+                <div class="info-container">
+                  <div class="basic-info">
+                    <p class="actor ellipsis">
+                      汤姆·西德勒斯顿/布丽·拉尔森/滚缪reseijslkgshglg
+                    </p>
+                  </div>
+                  <div class="buy_btn">
+                    <button class="button button-inverse">购票</button>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div id="movies">
+          <div class="movie-list">
+            <a href="" class="movie-item">
+              <img src="http://static.wepiao.com/movie/2017/2/27_0/201702271027262203.jpg" alt="">
+              <div class="movie-info">
+                <div class="flex">
+                  <div class="name flex-auto">金刚: 骷髅岛</div>
+                  <div>
+                    <span class="label label--secondary">IMAX3D</span>
+                  </div>
+                  <span class="score">
+                    <span>
+                      <i class="ico--popcorn"></i>
+                      <span class="c_cf616a">7.9分</span>
+                    </span>
+                  </span>
+                </div>
+                <div>
+                  <h4 class="remark">抖森勇闯骷髅岛,最强金刚归来</h4>
+                </div>
+                <div class="info-container">
+                  <div class="basic-info">
+                    <p class="actor ellipsis">
+                      汤姆·西德勒斯顿/布丽·拉尔森/滚缪reseijslkgshglg
+                    </p>
+                  </div>
+                  <div class="buy_btn">
+                    <button class="button button-inverse">购票</button>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="http://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+  <style>
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font:14px/1.5;*/
+  line-height: 1.5;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+
+
+}
+html,body{
+  height: 100%;
+}
+.red-box{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+ul>li:not(:last-child) a::after{
+  content:" |";
+}
+.nav{
+  align-self: flex-start;
+}
+ul,li{
+  list-style: none;
+  display: inline-block;
+}
+a{
+  text-decoration: none;
+}
+.nav li{
+  float: left;
+}
+.nav li a {
+  color: #333;
+  display: block;
+  /*padding:5px 5px;*/
+}
+.nav li a:hover{
+color: green;
+}
+  </style>
+</head>
+<body>
+  <div class="red-box animated bounceInUp"></div>
+  <ul class="nav">
+    <li><a href="#">标题一</a></li>
+    <li><a href="#">标题二</a></li>
+    <li><a href="#">标题三</a></li>
+    <li><a href="#">标题四</a></li>
+    <li><a href="#">标题五</a></li>
+  </ul>
+
+</body>
+</html>
